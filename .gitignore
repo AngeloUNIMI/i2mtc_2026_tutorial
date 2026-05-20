@@ -1,0 +1,8 @@
+# datasets / generated patches
+datastore/
+datastore_trainTest/
+patches_256_overlap_0.25_toll_5/
+
+# OS / editor
+.DS_Store
+.vscode/
