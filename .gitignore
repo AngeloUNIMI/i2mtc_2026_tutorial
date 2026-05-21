@@ -1,3 +1,7 @@
+# work dir
+.venv/
+.ipynb_checkpoints
+
 # datasets / generated patches
 datastore/
 datastore_trainTest/

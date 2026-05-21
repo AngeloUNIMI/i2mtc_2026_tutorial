@@ -22,41 +22,41 @@ def compute_orth_loss(model, modelName):
     diff = torch.zeros((), device=device)
 
     if modelName == "resnet18":
-        diff = utils.orth_dist(model.layer2[0].downsample[0].weight) + \
-               utils.orth_dist(model.layer3[0].downsample[0].weight) + \
-               utils.orth_dist(model.layer4[0].downsample[0].weight)
+        diff = utils.orth_dist(model.layer2[0].downsample[0].weight, device=device) + \
+               utils.orth_dist(model.layer3[0].downsample[0].weight, device=device) + \
+               utils.orth_dist(model.layer4[0].downsample[0].weight, device=device)
 
-        diff = diff + utils.deconv_orth_dist(model.layer1[0].conv1.weight, stride=1) + \
-                    utils.deconv_orth_dist(model.layer1[1].conv1.weight, stride=1)
+        diff = diff + utils.deconv_orth_dist(model.layer1[0].conv1.weight, stride=1, device=device) + \
+                    utils.deconv_orth_dist(model.layer1[1].conv1.weight, stride=1, device=device)
 
-        diff = diff + utils.deconv_orth_dist(model.layer2[0].conv1.weight, stride=2) + \
-                    utils.deconv_orth_dist(model.layer2[1].conv1.weight, stride=1)
+        diff = diff + utils.deconv_orth_dist(model.layer2[0].conv1.weight, stride=2, device=device) + \
+                    utils.deconv_orth_dist(model.layer2[1].conv1.weight, stride=1, device=device)
 
-        diff = diff + utils.deconv_orth_dist(model.layer3[0].conv1.weight, stride=2) + \
-                    utils.deconv_orth_dist(model.layer3[1].conv1.weight, stride=1)
+        diff = diff + utils.deconv_orth_dist(model.layer3[0].conv1.weight, stride=2, device=device) + \
+                    utils.deconv_orth_dist(model.layer3[1].conv1.weight, stride=1, device=device)
 
-        diff = diff + utils.deconv_orth_dist(model.layer4[0].conv1.weight, stride=2) + \
-                    utils.deconv_orth_dist(model.layer4[1].conv1.weight, stride=1)
+        diff = diff + utils.deconv_orth_dist(model.layer4[0].conv1.weight, stride=2, device=device) + \
+                    utils.deconv_orth_dist(model.layer4[1].conv1.weight, stride=1, device=device)
 
     elif modelName == "resnet34":
-        diff = utils.orth_dist(model.layer2[0].downsample[0].weight) + \
-               utils.orth_dist(model.layer3[0].downsample[0].weight) + \
-               utils.orth_dist(model.layer4[0].downsample[0].weight)
+        diff = utils.orth_dist(model.layer2[0].downsample[0].weight, device=device) + \
+               utils.orth_dist(model.layer3[0].downsample[0].weight, device=device) + \
+               utils.orth_dist(model.layer4[0].downsample[0].weight, device=device)
 
         for i in range(3):
-            diff = diff + utils.deconv_orth_dist(model.layer1[i].conv1.weight, stride=1)
+            diff = diff + utils.deconv_orth_dist(model.layer1[i].conv1.weight, stride=1, device=device)
 
-        diff = diff + utils.deconv_orth_dist(model.layer2[0].conv1.weight, stride=2)
+        diff = diff + utils.deconv_orth_dist(model.layer2[0].conv1.weight, stride=2, device=device)
         for i in range(1, 4):
-            diff = diff + utils.deconv_orth_dist(model.layer2[i].conv1.weight, stride=1)
+            diff = diff + utils.deconv_orth_dist(model.layer2[i].conv1.weight, stride=1, device=device)
 
-        diff = diff + utils.deconv_orth_dist(model.layer3[0].conv1.weight, stride=2)
+        diff = diff + utils.deconv_orth_dist(model.layer3[0].conv1.weight, stride=2, device=device)
         for i in range(1, 6):
-            diff = diff + utils.deconv_orth_dist(model.layer3[i].conv1.weight, stride=1)
+            diff = diff + utils.deconv_orth_dist(model.layer3[i].conv1.weight, stride=1, device=device)
 
-        diff = diff + utils.deconv_orth_dist(model.layer4[0].conv1.weight, stride=2)
+        diff = diff + utils.deconv_orth_dist(model.layer4[0].conv1.weight, stride=2, device=device)
         for i in range(1, 3):
-            diff = diff + utils.deconv_orth_dist(model.layer4[i].conv1.weight, stride=1)
+            diff = diff + utils.deconv_orth_dist(model.layer4[i].conv1.weight, stride=1, device=device)
 
     return diff
 
