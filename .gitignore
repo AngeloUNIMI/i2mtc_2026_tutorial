@@ -1,6 +1,7 @@
 # work dir
 .venv/
 .ipynb_checkpoints
+__pycache__
 
 # datasets / generated patches
 datastore/
