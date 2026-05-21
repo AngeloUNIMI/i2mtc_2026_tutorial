@@ -491,6 +491,13 @@ This tutorial is based on the following research works and resources.
    Brussels, Belgium, pp. 2045–2048, September 11–14, 2011.  
    ISBN: 978-1-4577-1302-6.  
    DOI: [10.1109/ICIP.2011.6115881](https://doi.org/10.1109/ICIP.2011.6115881)
+   
+3. A. Genovese, M. S. Hosseini, V. Piuri, K. N. Plataniotis, and F. Scotti,  
+    **"Histopathological transfer learning for Acute Lymphoblastic Leukemia detection,"**  
+    in *Proc. of the 2021 IEEE International Conference on Computational Intelligence and Virtual Environments for Measurement Systems and Applications (CIVEMSA 2021)*,  
+    pp. 1–6, June 18–20, 2021.  
+    ISBN: 978-1-6654-1249-0.  
+    DOI: [10.1109/CIVEMSA52099.2021.9493677](https://doi.org/10.1109/CIVEMSA52099.2021.9493677)
 
 ### Project Pages
 
@@ -525,3 +532,15 @@ This tutorial is based on the following research works and resources.
   isbn      = {978-1-4577-1302-6},
   doi       = {10.1109/ICIP.2011.6115881}
 }
+
+@inproceedings{genovese2021histopathological,
+  author    = {Genovese, Angelo and Hosseini, Mahdi S. and Piuri, Vincenzo and Plataniotis, Konstantinos N. and Scotti, Fabio},
+  title     = {{Histopathological Transfer Learning for Acute Lymphoblastic Leukemia Detection}},
+  booktitle = {Proceedings of the 2021 IEEE International Conference on Computational Intelligence and Virtual Environments for Measurement Systems and Applications (CIVEMSA 2021)},
+  pages     = {1--6},
+  month     = jun,
+  year      = {2021},
+  isbn      = {978-1-6654-1249-0},
+  doi       = {10.1109/CIVEMSA52099.2021.9493677}
+}
+
