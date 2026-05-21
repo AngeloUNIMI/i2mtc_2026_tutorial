@@ -1,0 +1,23 @@
+# Core scientific stack
+numpy
+pandas
+matplotlib
+Pillow
+
+# PyTorch stack
+torch
+torchvision
+
+# Metrics and image processing
+scikit-learn
+scikit-image
+
+# Jupyter / notebook support
+jupyter
+ipykernel
+ipython
+
+# Older Grad-CAM package used by:
+# from gradcam.utils import visualize_cam
+# from gradcam import GradCAM
+pytorch-gradcam

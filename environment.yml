@@ -1,0 +1,34 @@
+name: i2mtc2026
+channels:
+  - pytorch
+  - nvidia
+  - conda-forge
+  - defaults
+
+dependencies:
+  - python=3.10
+
+  # Core scientific stack
+  - numpy
+  - pandas
+  - matplotlib
+  - pillow
+
+  # PyTorch stack
+  - pytorch
+  - torchvision
+  - pytorch-cuda=12.1
+
+  # Metrics and image processing
+  - scikit-learn
+  - scikit-image
+
+  # Jupyter / notebook support
+  - jupyter
+  - ipykernel
+  - ipython
+
+  # Pip-only / legacy Grad-CAM package
+  - pip
+  - pip:
+      - pytorch-gradcam
