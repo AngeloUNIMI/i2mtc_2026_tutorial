@@ -35,7 +35,7 @@ The labels are treated as **multi-label**, because a patch may contain more than
 
 The repository includes example WSIs and annotation files in the `WSIs/` folder.
 
-![Example WSI](WSIs/Im001_1.jpg)
+![Example WSI](imgs/example.png)
 
 The corresponding centroid annotations are stored in:
 
@@ -379,91 +379,6 @@ The notebook is intended to be executed section by section:
 8. generate Grad-CAM maps;
 9. map detections back to WSI space.
 
----
-
-## Data and Generated Files
-
-Generated patches, datastores, model checkpoints, and temporary outputs can become large. They should usually not be committed to GitHub.
-
-Recommended `.gitignore` entries:
-
-```gitignore
-# datasets / generated patches
-datastore/
-datastore_trainTest/
-patches_256_overlap_0.25_toll_5/
-
-# model outputs
-*.pt
-*.pth
-*.onnx
-checkpoints/
-models/
-
-# Python/Jupyter
-__pycache__/
-*.pyc
-.ipynb_checkpoints/
-
-# OS/editor
-.DS_Store
-.vscode/
-```
-
----
-
-## I2MTC 2026 Tutorial Context
-
-The tutorial proposal describes a 1h 30m tutorial combining:
-
-- a lecture on Whole Slide Imaging and ALL detection;
-- a discussion of datasets, models, and evaluation metrics;
-- a hands-on session using CNNs for white blood cell classification.
-
-The slides organize the tutorial into three parts:
-
-1. **Handle Whole Slide Images**
-2. **Model**
-3. **Back to WSIs**
-
-This repository follows the same structure in executable notebook form.
-
----
-
-## Relevant Courses
-
-This tutorial repository also connects with topics in the attached INF/MAT/STAT/FIS course list, especially:
-
-- programming and software development;
-- machine learning and deep learning;
-- image processing and computer vision;
-- statistics and model evaluation;
-- mathematical optimization;
-- data handling and reproducible experiments.
-
-These course areas are reflected in the code through CNN training, WSI patch extraction, validation/test protocols, metric computation, Grad-CAM visualization, and reproducible experiment management.
-
----
-
-## References
-
-Relevant tutorial title:
-
-```text
-Artificial Intelligence for Whole Slide Imaging: Application to Acute Lymphoblastic Leukemia Detection
-I2MTC 2026 Tutorial
-Instructor: Angelo Genovese
-Università degli Studi di Milano
-```
-
-Relevant paper:
-
-```text
-AIMIA 2023 paper on WSI patch-based ALL classification and orthogonality regularization
-https://piurilabs.di.unimi.it/Papers/aimia23.pdf
-```
-
-Also cite the dataset and model architectures used in derived work, including ALL-IDB1, ResNet18, ResNet34, and any pretrained histopathology models used for transfer learning.
 
 ---
 
@@ -473,6 +388,15 @@ This repository is intended for research, teaching, and tutorial use. It is not 
 
 
 ## References and Project Pages
+
+Relevant tutorial title:
+
+```text
+Artificial Intelligence for Whole Slide Imaging: Application to Acute Lymphoblastic Leukemia Detection
+I2MTC 2026 Tutorial
+Instructor: Angelo Genovese
+Università degli Studi di Milano
+```
 
 This tutorial is based on the following research works and resources.
 
